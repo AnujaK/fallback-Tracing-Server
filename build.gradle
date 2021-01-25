@@ -17,7 +17,10 @@ ext {
 }
 
 dependencies {
-	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'// https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui
+  //  compile group: 'io.zipkin.java', name: 'zipkin-server', version: '2.12.9'
+   // compile group: 'io.zipkin.java', name: 'zipkin-autoconfigure-ui', version: '0.21.0'
+	compile 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
